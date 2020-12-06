@@ -53,4 +53,7 @@ function handleGeoSucc(position) {
         //weatherIcon.src = 
         //weatherSpan.innerHTML = 
     })
+    .catch(err => {
+        requestCoords();
+    })
  }
