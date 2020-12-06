@@ -1,5 +1,7 @@
 # VanilaJS Challenge Final
 
+## Start With index.html
+
 [x] Clock
 
 [x] Username Persistance.
@@ -8,8 +10,4 @@
 
 [x] Random Background Image.
 
-[ ] Weather with Geolocation.
-
-[x] 글자들 화면 중앙 정렬
-
-[ ] 글자크기 조정
+[x] Weather with Geolocation.
