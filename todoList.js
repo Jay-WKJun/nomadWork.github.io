@@ -27,21 +27,7 @@ function addTodo(){
     inputTodo.style.display="none";
     submitButton.style.display="none";
     
-    const newTodoDiv = document.createElement("div");
-    newTodoDiv.className = "todos yet";
-    
-    const todoListsArray = document.querySelectorAll(".yet").length;
-    newTodoDiv.id = "todo" + todoListsArray.length;
-
-    const newCheckBox = document.createElement("input");
-    newCheckBox.type = "checkBox";
-    newCheckBox.id = "checkBox";
-
-    const newSpan = document.createElement("span");
-    newSpan.innerText = inputContent;
-
-    newTodoDiv.appendChild(newCheckBox);
-    newTodoDiv.appendChild(newSpan);
+    newTodoDiv = makeNewTodoDiv('yet', inputContent);
 
     inputTodo.value = "";
 
@@ -51,46 +37,45 @@ function addTodo(){
     
 }
 
-
-
-const checkBox = document.querySelectorAll('#checkBox');
-checkBox.forEach( el => el.addEventListener('click', checkBoxEvent))
-checkBox[0].lastChild.innerText
-function checkBoxEvent(){
-    const parentElement = this.parentElement
-
-    console.log(parentElement.lastChild.innerHTML)
-
-
-    /*
+//todo Div를 만들어 리턴함
+function makeNewTodoDiv(divId, spanText, checked = false){
     const newTodoDiv = document.createElement("div");
-    newTodoDiv.className = "todos done";
+    newTodoDiv.className = `todos ${divId}`;
     
-    const todoListsArray = document.querySelectorAll(".done").length;
+    const todoListsArray = document.querySelectorAll(`.${divId}`).length;
     newTodoDiv.id = "todo" + todoListsArray.length;
 
     const newCheckBox = document.createElement("input");
     newCheckBox.type = "checkBox";
     newCheckBox.id = "checkBox";
+    newCheckBox.checked = checked;
+    newCheckBox.addEventListener('click', checkBoxEvent);
 
     const newSpan = document.createElement("span");
-    newSpan.innerText = inputContent;
+    newSpan.innerText = spanText;
 
     newTodoDiv.appendChild(newCheckBox);
     newTodoDiv.appendChild(newSpan);
-    */
 
+    return newTodoDiv;
+}
 
+const checkBox = document.querySelectorAll('#checkBox');
+checkBox.forEach( el => el.addEventListener('click', checkBoxEvent))
 
-    //완료 todo에 똑같이 추가
-    doneList.appendChild(parentElement)
+function checkBoxEvent(){
+    const parentElement = this.parentElement
 
-    parentElement.remove();
-    /*
     if(this.checked){
-        console.log(this.checked)
+        //클릭해서 체크되있으면 내리기
+        newTodoDiv = makeNewTodoDiv('done', parentElement.children[1].innerText, true);
+        //완료 todo에 똑같이 추가
+        doneList.appendChild(newTodoDiv)
     }else{
-
+        //체크가 풀려있으면 올리기
+        newTodoDiv = makeNewTodoDiv('yet', parentElement.children[1].innerText, false);
+        notDoneList.appendChild(newTodoDiv);
     }
-    */
+    
+    parentElement.remove();
 };

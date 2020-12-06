@@ -52,3 +52,11 @@
 #submitButton{
   display: none;
 }
+
+#checkBox{
+  margin: 5px;
+}
+
+span{
+  margin: 5px;
+}
