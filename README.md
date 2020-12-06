@@ -6,8 +6,10 @@
 
 [x] To Do List.
 
-[ ] Random Background Image.
+[x] Random Background Image.
 
 [ ] Weather with Geolocation.
 
 [x] 글자들 화면 중앙 정렬
+
+[ ] 글자크기 조정

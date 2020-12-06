@@ -6,7 +6,20 @@
 
 </head>
 <body>
-  <div class="outerBuffer"></div>
+  <div class="outerBuffer">
+    <div class="container"></div>
+    <div class="container"></div>
+    <div class="container" id="weatherContainer">
+      <div class="container"></div>
+      <div class="container"></div>
+      <div class="container">
+        <div id="weatherPic">
+        </div>
+        <div id="weatherDiv">
+        </div>
+      </div>
+    </div>
+  </div>
   <div id="textOuter" class="textOuter">
     <div class="container"></div>
     <div id = "textContainer" class="container textBox">
@@ -22,24 +35,14 @@
     <div id= "todoList" class="container">
       <h1 id="todoTitle">To do List</h1>
       <div id="notDoneList">
-        <div id="todo1" class="todos yet">
-          <input type="checkbox" id="checkbox"/>
-          <span>test1</span>
-        </div>
-        <div id="todo2" class="todos yet">
-          <input type="checkbox" id="checkbox"/>
-          <span>test2</span>
-        </div>
+
       </div>
       <i id="plusButton" class="far fa-calendar-plus todos"></i>
       <input type="text" id="inputTodo" class="todos" placeholder="Input here What you have to do~" />
       <i id="submitButton" class="fas fa-check-square todos"></i>
       <hr/>
       <div id="doneList">
-        <div id="todo2" class="todos done">
-          <input type="checkbox" id="checkbox" checked=true />
-          <span>test3</span>
-        </div>
+        
       </div>
     </div>
     <div class="container"></div>
@@ -49,5 +52,6 @@
   <script src="todoList.js"></script>
   <script src="todoListMouseOver.js"></script>
   <script src="randomBackGround.js"></script>
+  <script src="weather.js"></script>
 </body>
 </html>

@@ -7,7 +7,7 @@ function addClock(){
   const minute = now.getMinutes();
   const second = now.getSeconds();
 
-  clockDiv.innerHTML = `<h1>${hour}:${minute}:${second}</h1>`;
+  clockDiv.innerHTML = `<h1 style="font-size:55px">${hour}:${minute}:${second}</h1>`;
 }
 
 setInterval(addClock, 1000);
