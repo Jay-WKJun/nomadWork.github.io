@@ -27,14 +27,12 @@ function handleGeoSucc(position) {
     fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`)
     .then(res => res.json())
     .then(data => {
-        console.log(data)
         const temp = Math.round(data.main.temp);
         
         const weathers = data.weather[data.weather.length -1];
         const weatherSpan = `${temp}\xB0C ${weathers.main}`;
         
         const newIcon = document.createElement("img");
-        console.log(weathers.main);
         if(weathers.main == 'Sunny'){
             newIcon.src = './sun-day-weather-symbol_icon-icons.com_73146.png';
         }else if(weathers.main == 'Cloudy' || weathers.main == 'Haze'){

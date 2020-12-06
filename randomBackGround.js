@@ -11,7 +11,5 @@ const html = document.querySelector("html")
 
 const randomIndex = Math.ceil(Math.random() * imageUrls.length) - 1;
 
-console.log(randomIndex)
-
 html.style.backgroundImage = `url(${imageUrls[randomIndex]})`;
 html.style.backgroundSize = "cover";
