@@ -60,3 +60,8 @@
 span{
   margin: 5px;
 }
+
+html{
+  background-image: url('https://my.alfred.edu/zoom/_images/foster-lake.jpg');
+  background-size: cover;
+}

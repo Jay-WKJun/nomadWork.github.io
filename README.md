@@ -4,7 +4,7 @@
 
 [x] Username Persistance.
 
-[ ] To Do List.
+[x] To Do List.
 
 [ ] Random Background Image.
 
