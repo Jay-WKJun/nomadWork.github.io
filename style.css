@@ -1,11 +1,22 @@
-.textOuter {
+.outerBuffer{
   width:100%;
-  height:10%;
+  height:25%;
   position:relative;
-  top:30%
 }
 
-.textContainer {
+.textOuter {
+  width:100%;
+  height:20%;
+  position:relative;
+}
+
+.todoOuter {
+  width:100%;
+  height:30%;
+  position:relative;
+}
+
+.container {
   width:33%;
   height:33%;
   position: relative;
@@ -14,4 +25,30 @@
 
 .textBox {
   text-align: center;
+}
+
+#todoList {
+  height:auto;
+  text-align: center;
+  border-radius: 15px;
+  border: 5px solid black;
+  box-shadow: 3px 3px black;
+  padding-bottom: 10px;
+}
+
+#todoTitle{
+  margin : 10px;
+}
+
+.todos{
+  margin: 5px;
+}
+
+#inputTodo{
+  right: 50%;
+  display: none;
+}
+
+#submitButton{
+  display: none;
 }

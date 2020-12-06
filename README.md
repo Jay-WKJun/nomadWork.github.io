@@ -10,4 +10,4 @@
 
 [ ] Weather with Geolocation.
 
-[ ] 글자들 화면 중앙 정렬
+[x] 글자들 화면 중앙 정렬
