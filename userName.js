@@ -1,15 +1,16 @@
 //userName Persistance
 
+const useNameDiv = document.querySelector("#userName");
+
 function writeUserName(){
+    const userName = localStorage.getItem("userName");
     const nameH3 = document.createElement("h3");
-    nameH3.innerText = localStorage.getItem("UserName");
-    clockDiv.appendChild(nameH3);
+    nameH3.innerText = `Hello! ${userName}`
+    useNameDiv.appendChild(nameH3);
 }
 
-if(localStorage.getItem("userName")) {
-    
-}else{
-    localStorage.setItem("userName", "Jay");
+if(localStorage.getItem("userName") === null) {
+    localStorage.setItem("userName", "Jay");    
 }
 
 writeUserName();
